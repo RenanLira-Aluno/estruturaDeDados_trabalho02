@@ -1,0 +1,20 @@
+name: C++ CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: sudo apt-get install g++ make
+
+    - name: Compile
+      run: g++ -o q103 q103.c++
+
+    - name: Run tests
+      run: ./q103
