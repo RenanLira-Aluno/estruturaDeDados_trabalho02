@@ -1,15 +1,6 @@
-#include <stdlib.h>
-#include <string.h>
-#include <cctype>
-#include <stdio.h>
 #include <iostream>
 
-typedef int Item;
-typedef struct no
-{
-    Item item;
-    struct no *prox;
-} *Lista;
+#include "tipos.h"
 
 Lista no(Item x, Lista p)
 {
